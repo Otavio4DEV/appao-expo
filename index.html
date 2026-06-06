@@ -130,7 +130,125 @@
     .footer-inst{display:inline-block;margin-top:.5rem;background:rgba(201,75,26,.12);border:1px solid rgba(201,75,26,.25);color:var(--brand-lt);padding:.28rem .75rem;border-radius:100px;font-size:.75rem}
     .footer-credits{margin-top:1.2rem;font-size:.72rem;color:rgba(255,255,255,.2);line-height:1.6}
 
-    /* ── DESKTOP overrides ── */
+    
+    /* ── MOBILE FIRST — BASE (até 699px) ── */
+    
+    /* Touch targets */
+    a, button { -webkit-tap-highlight-color: transparent; }
+    
+    /* Nav mobile */
+    nav { padding: .75rem 1rem; }
+    .nav-logo span { font-size: 1.2rem; }
+    
+    /* Hero mobile aprimorado */
+    .hero {
+      min-height: 100svh;
+      padding: 5.5rem 1.2rem 3rem;
+      text-align: center;
+      flex-direction: column;
+      align-items: center;
+    }
+    .hero-title { font-size: clamp(2rem, 9vw, 3rem); line-height: 1.1; }
+    .hero-sub { font-size: .9rem; padding: 0 .5rem; }
+    .hero-actions { gap: .75rem; margin-top: 1.6rem; }
+    .btn-primary {
+      padding: .85rem 1.8rem;
+      font-size: .95rem;
+      width: 100%;
+      max-width: 260px;
+      border-radius: 100px;
+    }
+    .hero-mockup { max-width: 300px; width: 90%; margin-top: 2rem; }
+    .hero-stats {
+      gap: 1.5rem;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      width: 100%;
+      max-width: 300px;
+    }
+    .stat-num { font-size: 1.4rem; }
+    .stat-label { font-size: .65rem; }
+    
+    /* Sections mobile */
+    section { padding: 3.5rem 0; }
+    .container { padding: 0 1rem; }
+    .section-title { font-size: clamp(1.5rem, 7vw, 2rem); }
+    .section-desc { font-size: .9rem; }
+    
+    /* Sobre mobile */
+    .sobre-img { 
+      width: 100%;
+      margin-bottom: 1.5rem;
+      border-radius: 14px;
+      float: none !important;
+      margin-left: 0 !important;
+    }
+    .tag-strip { gap: .4rem; margin-top: 1.2rem; }
+    .tag { font-size: .73rem; padding: .28rem .65rem; }
+    
+    /* Features grid mobile — 2 colunas */
+    .features-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: .75rem;
+      margin-top: 2rem;
+    }
+    .feature-card { padding: 1.1rem; border-radius: 14px; }
+    .feature-icon { 
+      font-size: 1.4rem;
+      width: 40px;
+      height: 40px;
+      margin-bottom: .65rem;
+      border-radius: 10px;
+    }
+    .feature-title { font-size: .9rem; margin-bottom: .35rem; }
+    .feature-desc { font-size: .78rem; }
+    
+    /* Carousel mobile */
+    .carousel-slide { flex: 0 0 80vw; max-width: 320px; }
+    .carousel-controls { margin-top: 1.2rem; }
+    .carr-btn { width: 38px; height: 38px; font-size: 1rem; }
+    
+    /* Team grid mobile — 2 colunas */
+    .team-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: .75rem;
+      margin-top: 1.5rem;
+    }
+    .team-card { padding: 1rem; border-radius: 14px; }
+    .team-avatar { width: 38px; height: 38px; font-size: 1rem; margin-bottom: .65rem; }
+    .team-name { font-size: .82rem; }
+    .team-role { font-size: .68rem; }
+    .team-email { font-size: .65rem; }
+    
+    /* Mercado mobile */
+    .comp-cards { gap: .75rem; margin-top: 1.5rem; }
+    .comp-card { padding: 1.1rem; border-radius: 14px; }
+    .comp-name { font-size: .88rem; }
+    .comp-url { font-size: .68rem; }
+    .comp-text { font-size: .78rem; }
+    .badge-win, .badge-lose { font-size: .68rem; padding: .18rem .5rem; }
+    
+    /* Footer mobile */
+    footer { padding: 2rem 1rem; }
+    .footer-logo { font-size: 1.5rem; }
+    .footer-sub { font-size: .78rem; }
+    .footer-credits { font-size: .68rem; }
+    
+    /* Nav drawer mobile aprimorado */
+    .nav-drawer a { font-size: 1.7rem; }
+    
+    /* Scroll reveal performance */
+    @media (prefers-reduced-motion: reduce) {
+      .feature-card, .team-card, .comp-card {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+      @keyframes float { 0%, 100% { transform: none; } }
+      @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } }
+    }
+    
+/* ── DESKTOP overrides ── */
     @media(min-width:700px){
       nav{padding:1rem 3rem}
       .hamburger{display:none !important}
